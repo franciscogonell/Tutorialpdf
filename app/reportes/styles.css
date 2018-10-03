@@ -1,0 +1,25 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #5D6975;
+  text-decoration: underline;
+}
+body {
+  position: relative;
+  width: 21cm;  
+  height: 10.7cm; 
+  margin: 0 auto; 
+  color: #001028;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 10px; 
+  font-family: Arial;
+}
+header {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}

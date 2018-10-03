@@ -1,0 +1,112 @@
+=if([categoria]<>"Solar",concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],".
+"," Piso: ",[niveles],", Habitaciones: ",[habitaciones],",
+","Baños:  ",[Baños ],", Parqueos: ",[parqueos]),concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],"."," Mts 2 Solar: ",[Metros Cuadrados Solar]))
+
+
+
+=concatenate("Item: ",[item#],".","P               .",if([categoria]<>"Solar",concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],".
+"," Piso: ",[niveles],", Habitaciones: ",[habitaciones],",
+","Baños:  ",[Baños ],", Parqueos: ",[parqueos]),concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],"."," Mts 2 Solar: ",[Metros Cuadrados Solar])),".
+"," 
+",if(len([url])<=27,"0",concatenate("Ubicacion ",[url])))
+
+
+
+
+=concatenate("Item: ",[item#],".","P                        88989
+",if([categoria]<>"Solar",concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],".
+"," Piso: ",[niveles],", Habitaciones: ",[habitaciones],",
+","Baños:  ",[Baños ],", Parqueos: ",[parqueos]),concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],"."," Mts 2 Solar: ",[Metros Cuadrados Solar])),".
+"," 
+",if(len([url])<=27,"0",concatenate("Ubicacion ",[url])))
+
+
+
+=concatenate("Item: ",[item#],concatenate("                  x"),if([categoria]<>"Solar",concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],".
+"," Piso: ",[niveles],", Habitaciones: ",[habitaciones],",
+","Baños:  ",[Baños ],", Parqueos: ",[parqueos]),concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],"."," Mts 2 Solar: ",[Metros Cuadrados Solar])),".
+"," 
+",if(len([url])<=27,"0",concatenate("Ubicacion ",[url])))
+
+
+
+=concatenate("Item: ",[item#],"    .     ",if([categoria]<>"Solar",concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],".
+"," Piso: ",[niveles],", Habitaciones: ",[habitaciones],",
+","Baños:  ",[Baños ],", Parqueos: ",[parqueos]),concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],"."," Mts 2 Solar: ",[Metros Cuadrados Solar])),".
+"," 
+",if(len([url])<=27,"0",concatenate("Ubicacion ",[url])))
+
+=concatenate("<b>","Item: ",[item#],".","</b><br>",if([categoria]<>"Solar",concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],".
+"," Piso: ",[niveles],", Habitaciones: ",[habitaciones],",
+","Baños:  ",[Baños ],", Parqueos: ",[parqueos]),concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],"."," Mts 2 Solar: ",[Metros Cuadrados Solar])),".","<br>",if(len([url])<=27,"0",concatenate("Ubicacion ",[url])),"<br>","Comodidades","<br>",[comodidades],"<br>")
+
+
+=concatenate("<b>","Item: ",[item#],".","</b><br>",if([categoria]<>"Solar",concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],".
+"," Piso: ",[niveles],", Habitaciones: ",[habitaciones],",
+","Baños:  ",[Baños ],", Parqueos: ",[parqueos]),concatenate([operación]," ",[categoria]," en ",[sector],", ",[localizacion],"."," Mts 2 Solar: ",[Metros Cuadrados Solar])),".","<br>",if(len([url])<=27,"<br>",concatenate("Ubicacion ",[url])),"<br>",if(isblank([comodidades]),"<br>",concatenate("<br>","Comodidades","<br>",[comodidades],"<br>")),if(isblank([detalles]),"<br>",concatenate("<br>","Detalles","<br>",[detalles],"<br>")))
+
+
+if(isblank([comodidades]),"<br>",concatenate("<br>","Comodidades","<br>",[comodidades],"<br>"))
+
+
+
+"Item: <<item#>>.<br>
+<<Operacion>> <<Categoria>><br>"
+
+
+
+{ 
+   "value1":"Item: <<item#>><br>
+<<Operacin>> <<Categoria>><br>"    ,"value2": "<br><<[moneda]>>: <<[precio]>>"}
+
+{ 
+   "value1":"<<item#>><br>
+<<Operación>> <<Categoria>><br>"    ,"value2": "<br><<[moneda]>>: <<[precio]>>"}
+
+{"value1":"Item # :<<[UID]>><br><<[Operación]>>  <<[Categoría]>> en <<[Sector]>>, <<[Lugar]>>.<br><<[Moneda]>>","value2": ""}
+
+
+
+
+{ 
+   "value1":"<<[item#]>><br>
+<<[Operación]>> <<Categoria>><br>","value2": "<br><<[moneda]>>: <<[precio]>>"}
+
+
+{  "value1":"<<[Observacion]>><br>","value2": "<br><<[moneda]>>: <<[precio]>><br>Contacto : <<[contacto]>><br>"}
+
+
+{  "value1":"<<[Observacion]>><br>","value2": "<br><<[moneda]>>: <<[precio]>><br>Contacto : <<[contacto]>><br>Teléfono: <<[Telefono]>><br>
+<br>Vence en: <<[termino]>>}
+
+
+
+
+{  "value1":"Item # :<<[UID]>><br>","value2": ""}
+
+
+{  "value1":"Item # :<<[UID]>><br><<[Operación]>>  <<[Categoría]>> en" <<[sector]>>,<<[lugar]>>.,"value2": ""}
+
+{"value1":"Item # :<<[UID]>><br><<[Operación]>>  <<[Categoría]>> en<<[Sector]>>,<<[Lugar]>>.,"value2": ""}
+
+{"value1":"Item # :<<[UID]>><br><<[Operación]>>  <<[Categoría]>> en<<[Sector]>>, <<[Lugar]>>.","value2": ""}
+
+isblank([_THISROW_BEFORE].[Publicado])
+
+
+{"value1":"Item # :<<[UID]>><br><<[Operación]>>  <<[Categoría]>> en <<[Sector]>>,<<[Lugar]>> . 
+<br><<[Precio]>>  <<[Moneda]>>","value2": ""}
+
+
+{"value1":"Item # :<<[UID]>><br><<[Operación]>>  <<[Categoría]>> en <<[Sector]>>, <<[Lugar]>>.<br>","value2": ""}
+
+
+
+
+
+
+
+
+
+
+
